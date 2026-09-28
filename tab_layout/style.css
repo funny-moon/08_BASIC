@@ -1,0 +1,124 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #444;
+}
+body {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+/* layout */
+#header {
+  width: 960px;
+  height: 160px;
+  background: pink;
+  margin: 0 auto;
+  /* 중앙정렬 */
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px;
+  box-sizing: border-box;
+}
+#main {
+  width: 960px;
+  background: #26ffbe88;
+  margin: 0 auto;
+}
+#footer {
+  width: 960px;
+  height: 100px;
+  background: skyblue;
+  margin: 0 auto;
+}
+
+/* header */
+#title {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+#title h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 40px;
+  color: #444;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+#title h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 35px;
+  text-transform: lowercase;
+  color: #444;
+  line-height: 1;
+}
+
+#nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#nav ul.gnb {
+  display: flex;
+}
+#nav ul.gnb li {
+}
+#nav ul.gnb li a {
+  display: block;
+  padding: 8px 10px;
+  border: 1px solid #000;
+  background-color: rgb(28, 183, 255);
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+
+  transition: 1s;
+}
+#nav ul.gnb li:first-child a {
+  border-radius: 10px 0 0 10px;
+}
+#nav ul.gnb li:last-child a {
+  border-radius: 0 10px 10px 0;
+}
+#nav ul.gnb li a:hover {
+  background-color: #b40000;
+  color: aqua;
+}
+
+#nav ul.lnb {
+  display: flex;
+}
+#nav ul.lnb li {
+}
+#nav ul.lnb li a {
+  display: block;
+  padding: 10px 15px;
+  border: 1px solid #000;
+  background-color: #4a93ff;
+  color: #b40000;
+  font-weight: 800;
+
+  transition: 0.5s;
+}
+#nav ul.lnb li:first-child a {
+  border-radius: 15px 0 0 15px;
+}
+#nav ul.lnb li:last-child a {
+  border-radius: 0 15px 15px 0;
+}
+#nav ul.lnb li a:hover {
+  background-color: #00e67a;
+  color: #8d0063;
+}
