@@ -36,9 +36,12 @@ body {
   width: 960px;
   background: #26ffbe88;
   margin: 0 auto;
+
+  display: flex;
+  gap: 20px;
 }
 #footer {
-  width: 960px;
+  width: 100%;
   height: 100px;
   background: skyblue;
   margin: 0 auto;
@@ -55,6 +58,7 @@ body {
   color: #444;
   line-height: 1;
   letter-spacing: -1px;
+  color: #b40000;
 }
 #title h2 {
   font-family: "Dancing Script", cursive;
@@ -62,6 +66,7 @@ body {
   text-transform: lowercase;
   color: #444;
   line-height: 1;
+  color: #4a93ff;
 }
 
 #nav {
@@ -121,4 +126,135 @@ body {
 #nav ul.lnb li a:hover {
   background-color: #00e67a;
   color: #8d0063;
+}
+
+/****** main ********/
+#contents {
+  background-color: #ffde4b;
+  border: 1px solid #000;
+  flex: 1;
+}
+#aside {
+  background-color: #ff6cbd;
+  border: 1px solid #000;
+  width: 25%;
+}
+
+#contents .article {
+  padding: 20px;
+}
+#contents .article h2 {
+  width: 200px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #000;
+  padding-bottom: 8px;
+}
+#contents .article p {
+  line-height: 1.6;
+  letter-spacing: -1px;
+}
+
+/* aside */
+
+/* 탭선택 */
+/* first tab */
+input:nth-of-type(1) {
+  display: none;
+}
+
+input:nth-of-type(1) ~ div:nth-of-type(1) {
+  display: none;
+}
+input:nth-of-type(1):checked ~ div:nth-of-type(1) {
+  display: block;
+}
+
+/* second tab */
+input:nth-of-type(2) {
+  display: none;
+}
+
+input:nth-of-type(2) ~ div:nth-of-type(2) {
+  display: none;
+}
+input:nth-of-type(2):checked ~ div:nth-of-type(2) {
+  display: block;
+}
+
+/* 탭 모양 만들기 */
+.button {
+  display: flex;
+}
+.button label {
+  /* display: block; */
+  width: 50%;
+  height: 40px;
+  border-bottom: 1px solid #000;
+  /* text-align: center;
+  line-height: 40px; */
+  font-size: 18px;
+  font-weight: bold;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button label.first {
+  border-right: 1px solid #000;
+  background-color: #000;
+  color: #fff;
+}
+.button label.second {
+  background-color: #000;
+  color: #fff;
+}
+input:nth-of-type(1):checked ~ .button label.first {
+  background-color: yellow;
+  color: #000;
+}
+input:nth-of-type(2):checked ~ .button label.second {
+  background-color: yellow;
+  color: #000;
+}
+
+/* 탭 아이템 */
+.tab_item ul li {
+  border-bottom: 1px solid #000;
+  padding: 10px;
+}
+.tab_item ul li a {
+  display: flex;
+}
+.tab_item ul li a .thumnail {
+  margin-right: 10px;
+}
+.tab_item ul li a .description {
+}
+.tab_item ul li a .description strong {
+  display: block;
+  color: #000;
+  margin-bottom: 5px;
+
+  width: 150px;
+  /* 한줄 글자 생략 삼총사 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tab_item ul li a .description em {
+  font-style: normal;
+  font-size: 14px;
+}
+
+/* footer */
+#footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#footer address {
+  font-style: normal;
 }
